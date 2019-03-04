@@ -24,3 +24,5 @@ unzip -O sjis sample.zip
 # 文字コード---------------------------------------
 # カレントディレクトリ内の全ファイルの文字コードを一括でutf8に置換(上書き)
 find . -type f -print0 | xargs -0 nkf --overwrite -w -Lu
+# 文字コード&改行コードの判定
+nkf --guess *.md
