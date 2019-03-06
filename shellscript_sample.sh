@@ -82,3 +82,12 @@ sudo chown web.api sample.sh
 # シンボリックリンクを作成する
 ln -s ./app/log/ log # ディレクトリのシンボリックリンクを作成する
 ln -s ./bin/commandA commandA # ファイルのシンボリックリンクを作成する
+
+# シェル---------------------------------------
+# デフォルトシェルをfishに変更
+# https://github.com/fish-shell/fish-shell/
+sudo chsh -s /usr/local/bin/fish
+
+# パッケージ関連---------------------------------------
+# aptコマンドにレポジトリを追加
+sudo apt-add-repository ppa:fish-shell/release-3
