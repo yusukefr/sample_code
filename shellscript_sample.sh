@@ -77,3 +77,8 @@ sudo chown .web sample.sh　# 「sample.sh」の所有グループを「web」�
 sudo chown api sample.sh
 # 「sample.sh」の所有者を「api」に、所有グループを「web」に変更する
 sudo chown web.api sample.sh
+
+# リンク---------------------------------------
+# シンボリックリンクを作成する
+ln -s ./app/log/ log # ディレクトリのシンボリックリンクを作成する
+ln -s ./bin/commandA commandA # ファイルのシンボリックリンクを作成する
