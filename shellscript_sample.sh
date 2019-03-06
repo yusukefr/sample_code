@@ -44,3 +44,6 @@ pstree -U
 # │         ├─dbus-daemon
 # │         ├─ibus-portal───2*[{ibus-portal}]
 # │         └─pulseaudio───2*[{pulseaudio}]
+
+# プロセス停止
+kill <process number>
