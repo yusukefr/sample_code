@@ -89,5 +89,7 @@ ln -s ./bin/commandA commandA # ファイルのシンボリックリンクを作
 sudo chsh -s /usr/local/bin/fish
 
 # パッケージ関連---------------------------------------
-# aptコマンドにレポジトリを追加
+# パッケージ管理にレポジトリを追加
 sudo apt-add-repository ppa:fish-shell/release-3
+# パッケージ管理からレポジトリを削除
+sudo add-apt-repository --remove ppa:fish-shell/release-2
