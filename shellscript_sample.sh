@@ -50,8 +50,21 @@ kill <process number>
 
 # 検索関連---------------------------------------
 # grep で単語単位で検索する
-dmesg | grep -w video
+dmesg | grep -w "video"
 # 検索結果にヒットした行の前後の行も表示
-cat sample.txt | grep -C 2 video # 前後2行も表示
-cat sample.txt | grep -A 2 video # 後2行も表示
-cat sample.txt | grep -B 2 video # 前2行も表示
+cat sample.txt | grep -C 2 "video" # 前後2行も表示
+cat sample.txt | grep -A 2 "video" # 後2行も表示
+cat sample.txt | grep -B 2 "video" # 前2行も表示
+# ○○を含まない行だけを表示する
+ls -l /etc | grep -v "root"
+ls -l /proc/ | grep -v -E "root\s+root" # 正規表現使用
+# or検索
+cat sample.txt | grep -E "文字列1|文字列2|文字列3"
+# and検索
+cat sample.txt | grep "文字列1" | grep "文字列2"
+
+# パーミッション---------------------------------------
+# 実行権限の付与
+chmod +x sample.py
+# 権限755［rwxr-xr-x］を付与
+chmod 755 sample.py
