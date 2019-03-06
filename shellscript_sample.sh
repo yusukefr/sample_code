@@ -20,7 +20,6 @@ set "PATH=%~dp0;%PATH%"
 # Windows環境で作成されたzipファイルを解凍(文字コードsjisを指定して解凍)
 unzip -O sjis sample.zip
 
-
 # 文字コード---------------------------------------
 # カレントディレクトリ内の全ファイルの文字コードを一括でutf8に置換(上書き)
 find . -type f -print0 | xargs -0 nkf --overwrite -w -Lu
@@ -32,3 +31,16 @@ sudo systemctl isolate multi-user.target # CLIモードにする
 sudo systemctl isolate graphical.target # GUIモードにする
 sudo systemctl set-default multi-user.target # デフォルトをCLIモードにする
 sudo systemctl set-default graphical.target # デフォルトをGUIモードにする
+
+# プロセス関連---------------------------------------
+# 実行中のプロセスを表示
+ps axu
+# 親子関係をツリー形式で表示
+pstree -U
+# ├─systemd─┬─(sd-pam)
+# │         ├─at-spi-bus-laun─┬─dbus-daemon
+# │         │                 └─3*[{at-spi-bus-laun}]
+# │         ├─at-spi2-registr───2*[{at-spi2-registr}]
+# │         ├─dbus-daemon
+# │         ├─ibus-portal───2*[{ibus-portal}]
+# │         └─pulseaudio───2*[{pulseaudio}]
