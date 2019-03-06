@@ -47,3 +47,11 @@ pstree -U
 
 # プロセス停止
 kill <process number>
+
+# 検索関連---------------------------------------
+# grep で単語単位で検索する
+dmesg | grep -w video
+# 検索結果にヒットした行の前後の行も表示
+cat sample.txt | grep -C 2 video # 前後2行も表示
+cat sample.txt | grep -A 2 video # 後2行も表示
+cat sample.txt | grep -B 2 video # 前2行も表示
