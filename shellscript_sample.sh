@@ -26,3 +26,9 @@ unzip -O sjis sample.zip
 find . -type f -print0 | xargs -0 nkf --overwrite -w -Lu
 # 文字コード&改行コードの判定
 nkf --guess *.md
+
+# CLI/GUIモード---------------------------------------
+sudo systemctl isolate multi-user.target # CLIモードにする
+sudo systemctl isolate graphical.target # GUIモードにする
+sudo systemctl set-default multi-user.target # デフォルトをCLIモードにする
+sudo systemctl set-default graphical.target # デフォルトをGUIモードにする
