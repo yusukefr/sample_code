@@ -27,6 +27,27 @@ cat sample.txt | grep -E "文字列1|文字列2|文字列3"
 # and検索
 cat sample.txt | grep "文字列1" | grep "文字列2"
 
+# sed/awk---------------------------------------
+# 指定業のみ出力
+cat sample.txt | sed -n 2,4p # 2〜4行目のみ出力
+
+# 行削除
+cat sample.txt | sed 1d # 1行目の削除
+cat sample.txt | sed 1,12d # 1～12行目を削除
+# 文字列の挿入
+cat sample.txt | sed "s/^/-- /" # すべての行頭に「-- 」を挿入
+cat sample.txt | sed "s/\$/ --/" # すべての行末に「 --」を挿入
+
+# 文字列置換
+cat sample.txt | sed "s/sed/SED/g" # sed → SEDに置換
+# 拡張子の置換
+ls | sed "s/\.jpg$/.jpeg/" # $で末尾を指定
+
+# スクリプトファイルの指定
+# --- print.sed ---
+# 2p
+cat sample.txt | sed -f print.sed
+
 # 圧縮/解凍---------------------------------------
 # Windows環境で作成されたzipファイルを解凍(文字コードsjisを指定して解凍)
 unzip -O sjis sample.zip
