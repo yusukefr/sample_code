@@ -5,6 +5,8 @@
 cat sample.txt | head -n 25
 # ログファイルの監視
 tail -f /var/log/messages
+# テキストファイル内の記述を重複を弾いて、ソート
+cat sample.txt | sort | uniq -c | sort -nr
 
 # 文字コード---------------------------------------
 # カレントディレクトリ内の全ファイルの文字コードを一括でutf8に置換(上書き)
