@@ -5,6 +5,8 @@
 cat sample.txt | head -n 25
 # ログファイルの監視
 tail -f /var/log/messages
+
+
 # テキストファイル内の記述を重複を弾いて、ソート
 cat sample.txt | sort | uniq -c | sort -nr
 
@@ -29,7 +31,7 @@ cat sample.txt | grep -E "文字列1|文字列2|文字列3"
 # and検索
 cat sample.txt | grep "文字列1" | grep "文字列2"
 
-# sed/awk---------------------------------------
+# sed---------------------------------------
 # 指定業のみ出力
 cat sample.txt | sed -n 2,4p # 2〜4行目のみ出力
 
@@ -49,6 +51,10 @@ ls | sed "s/\.jpg$/.jpeg/" # $で末尾を指定
 # --- print.sed ---
 # 2p
 cat sample.txt | sed -f print.sed
+
+# awk---------------------------------------
+# 指定列のみ出力
+ls -l | awk '{ print $6,$7,$8,$9 }'| column -t
 
 # 圧縮/解凍---------------------------------------
 # Windows環境で作成されたzipファイルを解凍(文字コードsjisを指定して解凍)
@@ -108,6 +114,10 @@ sudo chown web.api sample.sh
 # シンボリックリンクを作成する
 ln -s ./app/log/ log # ディレクトリのシンボリックリンクを作成する
 ln -s ./bin/commandA commandA # ファイルのシンボリックリンクを作成する
+
+# エイリアス---------------------------------------
+# 現在設定されているエイリアスを確認する
+alias
 
 # CLI/GUIモード---------------------------------------
 sudo systemctl isolate multi-user.target # CLIモードにする
