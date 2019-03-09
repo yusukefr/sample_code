@@ -79,6 +79,8 @@ sudo shutdown # 管理者権限必要
 poweroff
 reboot # rebootは内部でshutdown -r -q nowを呼び出しているだけ
 
+notify-send 'テストメッセージ' # UbuntuのGnome通知にメッセージ送信
+
 # プロセス関連---------------------------------------
 # 実行中のプロセスを表示
 ps axu
