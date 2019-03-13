@@ -77,6 +77,9 @@ tar -czvf data0809.tgz * # gzip形式で圧縮
 # アーカイブファイル「data0809.tgz」を展開する
 tar -xzvf data0809.tgz
 
+# zipファイル内の情報を表示する
+zipinfo sample.zip
+
 # パッケージ関連---------------------------------------
 # パッケージ管理にレポジトリを追加
 sudo apt-add-repository ppa:fish-shell/release-3
