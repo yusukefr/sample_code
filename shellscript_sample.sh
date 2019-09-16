@@ -40,7 +40,6 @@ cat sample.txt | grep "文字列1" | grep "文字列2"
 # /usr/binにあるシンボリックリンクを探す
 find /usr/bin -type l
 
-
 # sed---------------------------------------
 # 指定業のみ出力
 cat sample.txt | sed -n 2,4p # 2〜4行目のみ出力
