@@ -23,35 +23,51 @@ You can write notes in GitHub-flavored Markdown.
 ## Emphasis
 
 **bold**
+
 ```markdown
 **bold**
 ```
 
 *italic*
+
 ```markdown
 *italic*
 ```
 
 **_あわせ技_**
+
 ```markdown
 **_あわせ技_**
 ```
 
 ~~取り消し~~
+
 ```markdown
 ~~取り消し~~
 ```
 
 ## Link
 
+### web urlへのリンク
+
 [googleへのリンク](https://www.google.com)
+
 ```markdown
 [googleへのリンク](https://www.google.com)
+```
+
+### ローカルファイルへのリンク（相対パス）
+
+[AboutMe](/shellscript_sample.sh)
+
+```markdown
+[AboutMe](/shellscript_sample.sh)
 ```
 
 ## Image
 
 ![検索サイト画像](https://3.bp.blogspot.com/-mNXO3JFCD1k/XDXcUXoXq1I/AAAAAAABRJE/fz1eHX4BT54DPRWz1DpdmQYRbtJaZ9XvACLcBGAs/s400/website_kensaku_top.png "検索サイトのイラスト")
+
 ```markdown
 ![検索サイト画像](https://3.bp.blogspot.com/-mNXO3JFCD1k/XDXcUXoXq1I/AAAAAAABRJE/fz1eHX4BT54DPRWz1DpdmQYRbtJaZ9XvACLcBGAs/s400/website_kensaku_top.png "検索サイトのイラスト")
 ```
@@ -59,7 +75,8 @@ You can write notes in GitHub-flavored Markdown.
 ## Code and Syntax Highlighting
 
 VSCodeの起動には、`code` コマンドが使用できます。
-```
+
+```markdown
 VSCodeの起動には、`code` コマンドが使用できます。
 ```
 
@@ -67,6 +84,7 @@ VSCodeの起動には、`code` コマンドが使用できます。
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
+
 <pre>
 ```javascript
 var s = "JavaScript syntax highlighting";
@@ -78,6 +96,7 @@ alert(s);
 s = "Python syntax highlighting"
 print(s)
 ```
+
 <pre>
 ```python
 s = "Python syntax highlighting"
@@ -110,6 +129,7 @@ print(s)
 >
 > > 引用文章  
 > > 引用文章
+
 ```markdown
 > 引用文章  
 > 引用文章
@@ -122,6 +142,7 @@ print(s)
 ## Horizontal Line
 
 ---
+
 ```markdown
 ---
 ```
