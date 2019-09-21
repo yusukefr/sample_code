@@ -115,15 +115,16 @@ chmod +x sample.py
 # 権限755［rwxr-xr-x］を付与
 chmod 755 sample.py
 
-# グループ/所有権---------------------------------------
+# グループ/ユーザ/所有権---------------------------------------
 # グループの変更
 sudo chgrp web sample.sh # 「sample.sh」の所有グループを「web」に変更する
-sudo chown .web sample.sh　# 「sample.sh」の所有グループを「web」に変更する
+sudo chown :web sample.sh　# 「sample.sh」の所有グループを「web」に変更する
 # 「sample.sh」の所有者を「api」というユーザーに変更する（所有グループは変更しない）
 sudo chown api sample.sh
 # 「sample.sh」の所有者を「api」に、所有グループを「web」に変更する
-sudo chown web.api sample.sh
-
+sudo chown web:api sample.sh
+# ユーザAをdockerグループに追加（dockerコマンドをsudoなしで実行するため）
+sudo adduser userA docker
 # リンク---------------------------------------
 # シンボリックリンクを作成する
 ln -s ./app/log/ log # ディレクトリのシンボリックリンクを作成する
