@@ -91,7 +91,9 @@ sudo shutdown # 管理者権限必要
 poweroff
 reboot # rebootは内部でshutdown -r -q nowを呼び出しているだけ
 
-notify-send 'テストメッセージ' # UbuntuのGnome通知にメッセージ送信
+# メッセージング-------------------------------------
+# UbuntuのGnome通知にメッセージ送信
+notify-send 'テストメッセージ'
 
 # プロセス関連---------------------------------------
 # 実行中のプロセスを表示
@@ -109,6 +111,9 @@ pstree -U
 # プロセス停止
 kill <process number>
 
+# バックグラウンドでプロセス/アプリ実行(最後に&を付与する)
+flameshot.py &
+
 # パーミッション---------------------------------------
 # 実行権限の付与
 chmod +x sample.py
@@ -125,6 +130,7 @@ sudo chown api sample.sh
 sudo chown web:api sample.sh
 # ユーザAをdockerグループに追加（dockerコマンドをsudoなしで実行するため）
 sudo adduser userA docker
+
 # リンク---------------------------------------
 # シンボリックリンクを作成する
 ln -s ./app/log/ log # ディレクトリのシンボリックリンクを作成する
